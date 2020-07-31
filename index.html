@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .wrap {
+      width: 200px;
+      height: 200px;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" placeholder="输入你的内容">
+  <button>发送请求</button>
+  <div class="wrap"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    // 连接socket服务
+    var socket = io('http://localhost:3000')
+    socket.on('send', data => {
+      console.log(data)
+    })
+    socket.emit('hh', {
+      name: 'zs',
+      msg: 'ceshi'
+    })
+  </script>
+</body>
+</html>
