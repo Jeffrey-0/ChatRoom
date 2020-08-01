@@ -1,0 +1,337 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(../images/bg.jpg);
+  border: 0.1px solid solid;
+  /* box-sizing: border-box; */
+  /* overflow: hidden; */
+  /* overflow: scroll; */
+  /* filter: blur(15px); */
+  /* opacity: 0.5; */
+  /* background: url(../images/bg.jpg) no-repeat 50%; */
+}
+body::after {
+  content: '';
+  display: block;
+}
+.login_box {
+  position: relative;
+  top: 100px;
+  width: 300px;
+  height: 330px;
+  margin: 0px auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: #999 0px 2px 10px;
+}
+.login_box .avatar {
+  width: 100%;
+  /* height: 400px; */
+}
+.login_box .avatar::after {
+  content: '';
+  display: block;
+  clear:both;
+}
+.login_box .avatar li {
+  float: left;
+  width: 60px;
+  height: 60px;
+  list-style: none;
+  padding: 2px;
+  box-sizing: border-box;
+}
+.login_box .avatar li.now {
+  border: 1px solid red;
+}
+.login_box .avatar li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.login_box .title {
+  text-align: center;
+  font-size: 22px;
+}
+.login_box p {
+  font-size: 16px;
+  padding: 10px 0px;
+}
+.login_box input, .login_box button {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+}
+.login_box button {
+  background: #3caf36;
+  border: 0px;
+  border-radius: 2px;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.invisible {
+  display: none;
+}
+
+.user-list img, .box-bd .avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.container {
+  margin: 0px auto;
+  max-width: 1000px;
+  min-width: 700px;
+  width: 100%;
+  height: 100%;
+  min-height: 720px;
+  border-radius: 3px;
+}
+
+.container .user-list {
+  box-sizing: border-box;
+  padding: 15px;
+  float: left;
+  height: 100%;
+  width: 280px;
+  background: #2e3238;
+  color: #fff;
+  font-size: 16px;
+}
+.user-list ul {
+  height: 580px;
+  overflow: auto;
+  /* scrollbar-width: 0px; */
+}
+
+.container .header, .container .title {
+  border-bottom: 1px solid #26292e;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.container h3 {
+  /* font-size: 10px; */
+  font-weight: normal;
+  /* border-top: 1px solid #f2f2f2; */
+}
+.container .avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.info, .user .name{
+  float: right;
+  width: 190px;
+  height: 40px;
+  line-height: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.container .user-list .user {
+  list-style: none;
+  padding: 10px 0px;
+}
+.container .box {
+  /* float: right; */
+  display: inline-block;
+  height: 100%;
+  width: calc(100% - 280px);
+  min-width: 420px;
+  background: #eeeeee;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container .box .box-hd {
+  text-align: center;
+  border-bottom: 1px solid #d6d6d6;
+  padding-bottom: 10px;
+}
+.container .box .box-bd {
+  width: 100%;
+  height: 450px;
+  overflow: auto;
+  padding: 10px 0px;
+}
+
+/* 设置滚动条样式 */
+/* 滚动条整体样式 */
+.user-list ul::-webkit-scrollbar, .container .box .box-bd::-webkit-scrollbar, .box-ft #content::-webkit-scrollbar {
+  width: 5px;
+  height: 1px;
+}
+/* 滚动条里面的小方块 */
+.user-list ul::-webkit-scrollbar-thumb, .container .box .box-bd::-webkit-scrollbar-thumb, .box-ft #content::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #f2f2f2;
+}
+/* 滚动条里面的轨道 */
+.user-list ul::-webkit-scrollbar-track, .container .box .box-bd::-webkit-scrollbar-track, .box-ft #content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.box-ft {
+  border-top: 1px solid #d6d6d6;
+  width: 100%;
+  height: 180px;
+  /* overflow: hidden; */
+}
+.box-ft .toolbar {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.box-ft .toolbar label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.box-ft .action {
+  float: right;
+  height: 40px;
+  font-size: 12px;
+  color: #9b9b9b;
+}
+.box-ft .action .btn-send{
+  /* width: 40px; */
+  display: inline-block;
+  padding: 2px 25px;
+  background: #fcfcfd;
+  color: black;
+  text-decoration: none;
+  border: 1px solid #9b9b9b;
+  font-size: 16px;
+  border-radius: 3px;
+}
+.box-ft .action .btn-send:hover {
+  background: #f8f8f8;
+}
+.box-ft .content, .box-ft #content {
+  height: 120px;
+  border: 0px solid black;
+  background: #eeeeee;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  overflow: auto;
+}
+.box-ft .toolbar a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/icon.png);
+  background-size: 487px 462px;
+}
+.box-ft .toolbar a.face {
+  background-position: -404px -398px;
+}
+.box-ft .toolbar a.screen-cut {
+  background-position: -30px -432px;
+}
+.box-ft .toolbar a.file {
+  /* background-size: 487px 462px; */
+  background-position: -120px -432px;
+}
+.box-bd .message-box {
+  padding: 10px;
+  position: relative;
+}
+.box-bd .message-box .content {
+  max-width: 400px;
+  display: inline-block;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  line-height: 30px;
+  vertical-align: top;
+  background: #fff;
+  border-radius: 4px;
+  position: relative;
+}
+/* 添加消息框中的小三角 */
+.box-bd .message-box .other .content::before {
+  position: absolute;
+  top: 14px;
+  border: 6px solid transparent;
+  content: "";
+  left: -10px;
+  border-right-color: #fff;
+  border-right-width: 4px
+}
+.box-bd .message-box .my .content::after {
+  position: absolute;
+  left: 100%;
+  top: 14px;
+  border: 6px solid transparent;
+  content: "";
+  border-left-color: #b2e281;
+  border-left-width: 4px
+}
+
+
+.box-bd .message-box .my .avatar, .box-bd .message-box .my .content{
+  float: right;
+  margin-right: 10px;
+  background: #b2e281;
+}
+.box-bd .message-box .my::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.nickname {
+  position: absolute;
+  top: -10px;
+  color: #b7b7b7;
+  font-size: 12px;
+}
+.system {
+  text-align: center;
+  color: #b7b7b7;
+  font-size: 12px;
+}
+.system.leave {
+  color: #cc3322;
+}
+.bubble_cont img {
+  max-width: 300px;
+}
+ul .user {
+  border-bottom: 1px solid #26292e;
+}
+.container .user-list .active{
+  background: #3a3f45;
+}
+.bubble_toName {
+  position: absolute;
+  font-size: 12px;
+  color: gray;
+  top: 0;
+  left: 100%;
+  width: 30px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 10px;
+}
+.my .bubble_toName {
+  left: -40px;
+}
