@@ -67,7 +67,7 @@ io.on('connect', function (socket) {
   // 监听图片聊天信息
   socket.on('sendImage', data => {
     // 广播给所有用户
-    if (data.username === '群聊') {
+    if (data.toName === '群聊') {
       io.emit('receiveImage', data)
     } else {
       // 广播给指定用户
@@ -82,6 +82,9 @@ io.on('connect', function (socket) {
         // 发送给指定用户
         socket.to(toSocket).emit('receiveImage', data)
         // 发送给自己
+        socket.emit('receiveImage', data)
+      } else {
+        data.msg = 0
         socket.emit('receiveImage', data)
       }
     }
